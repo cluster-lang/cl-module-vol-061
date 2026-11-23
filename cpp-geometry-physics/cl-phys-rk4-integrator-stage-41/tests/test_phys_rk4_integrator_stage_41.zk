@@ -1,0 +1,12 @@
+// cl-phys-rk4-integrator-stage-41: Test Suite
+import "../prk_41.zk"
+
+fn test_run():
+    res := rk4_step_41(10.0, 3.0, 3.0, 1.0)
+    diff := res - 13.4100
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.01: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-phys-rk4-integrator-stage-41!")

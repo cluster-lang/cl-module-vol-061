@@ -1,0 +1,6 @@
+// cl-ray-slab-intersect-stage-7517
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn slab_t_min_7517(box_min: float, ray_origin: float, inv_dir: float) -> float:
+    return ((box_min - ray_origin) * inv_dir) + 1.70

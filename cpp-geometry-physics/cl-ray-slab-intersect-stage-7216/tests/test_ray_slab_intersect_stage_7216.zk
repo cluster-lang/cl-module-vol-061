@@ -1,0 +1,12 @@
+// cl-ray-slab-intersect-stage-7216: Test Suite
+import "../rsi_7216.zk"
+
+fn test_run():
+    res := slab_t_min_7216(10.0, 2.0, 0.5)
+    diff := res - 5.6000
+    if diff < 0.0: diff = 0.0 - diff
+    if diff > 0.01: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-ray-slab-intersect-stage-7216!")
